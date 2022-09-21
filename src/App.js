@@ -14,7 +14,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <div>{displayName}</div>
         <div>{email}</div>
-        <img src={`${photoURL}`}></img>
+        <img src={`${photoURL}`} alt="alt text"></img>
         <button onClick={() => dispatch(logout())}>Logout</button>
       </header>
     </div>
