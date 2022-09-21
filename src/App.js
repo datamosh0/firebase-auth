@@ -6,15 +6,15 @@ import { useSelector } from "react-redux";
 import { selectUser } from "./app/userSlice";
 function App() {
   const dispatch = useDispatch();
-  const currentUser = useSelector(selectUser);
+  const { displayName, email, photoURL, uid } = useSelector(selectUser);
   return (
     <div className="App">
       <header className="App-header">
         <h1>Logged In</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <div>{currentUser.displayName}</div>
-        <div>{currentUser.email}</div>
-        {/* <img src={`${currentUser.photoURL}`}></img> */}
+        <div>{displayName}</div>
+        <div>{email}</div>
+        <img src={`${photoURL}`}></img>
         <button onClick={() => dispatch(logout())}>Logout</button>
       </header>
     </div>
